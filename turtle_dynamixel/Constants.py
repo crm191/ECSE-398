@@ -30,7 +30,7 @@ DXL_IDALL                   = 254
 # Protocol version
 PROTOCOL_VERSION            = 2.0            # See which protocol version is used in the Dynamixel
 # MOD_DEVICE                  = 'COM3'
-JOINTS                      = 'COM3'
+JOINTS                      = 'COM3' # 'COM3' for Windows
 BAUDRATE                    = 4000000
 # portHandlerMod              = PortHandler(MOD_DEVICE)
 # packetHandlerMod            = PacketHandler(PROTOCOL_VERSION)
