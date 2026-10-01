@@ -2,8 +2,13 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
+'''
 submodule = os.path.expanduser("~") + "/drl-turtle/ros2_ws/src/turtle_hardware/turtle_hardware/turtle_dynamixel"
 sys.path.append(submodule)
+'''
+# ────── Path Setup - Windows ──────────────────────────────────────────────────────────────────
+#sys.path.append(r"C:\Users\charr\OneDrive - Case Western Reserve University\Documents\ECSE 398\venv\Lib\site-packages")
+
 from dynamixel_sdk import *                    # Uses Dynamixel SDK library
 from Dynamixel import *                        # Dynamixel motor class
 import math
@@ -34,8 +39,8 @@ JOINTS                      = 'COM3' # 'COM3' for Windows
 BAUDRATE                    = 4000000
 # portHandlerMod              = PortHandler(MOD_DEVICE)
 # packetHandlerMod            = PacketHandler(PROTOCOL_VERSION)
-portHandlerJoint            = PortHandler(JOINTS)
-packetHandlerJoint          = PacketHandler(PROTOCOL_VERSION)
+#portHandlerJoint            = PortHandler(JOINTS)
+#packetHandlerJoint          = PacketHandler(PROTOCOL_VERSION)
 MAX_VELOCITY = 20
 
 # some constants 
@@ -71,3 +76,9 @@ max_torque = 75
 xw_max_torque = 2000 #4500
 min_torque = 5
 xw_min_torque = 2
+
+def init_hardware():
+    # Initialize the hardware by creating port and packet handlers for the joints
+    portHandlerJoint = PortHandler(JOINTS)
+    packetHandlerJoint = PacketHandler(PROTOCOL_VERSION)
+    return portHandlerJoint, packetHandlerJoint

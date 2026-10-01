@@ -35,6 +35,7 @@ LEN_GOAL_VELOCITY          = 4                 # Data Byte Length
 from dynamixel_sdk import *                     # Uses Dynamixel SDK library
 # from packet_handling import *
 import math
+import time
 
 def twos_comp(bit_s):
     # print(f"our first bit: {bit_s[0]}")

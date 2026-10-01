@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-submodule = os.path.expanduser("~") + "/drl-turtle/ros2_ws/src/turtle_hardware/turtle_hardware/turtle_dynamixel"
-sys.path.append(submodule)
+#submodule = os.path.expanduser("~") + "/drl-turtle/ros2_ws/src/turtle_hardware/turtle_hardware/turtle_dynamixel"
+#sys.path.append(submodule)
 import numpy as np
 from math import sqrt, sin, cos
 from mass import mass
